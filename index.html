@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Có phải mày là gay không?</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      text-align: center;
+      padding-top: 100px;
+      font-family: 'Arial', sans-serif;
+    }
+    h1 {
+      font-size: 36px;
+      color: #d63384;
+    }
+    button {
+      font-size: 20px;
+      padding: 14px 28px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #yes {
+      background-color: #28a745;
+      color: white;
+    }
+    #no {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>👉 Mày có phải là gay không? 😏</h1>
+  <button id="yes">Có 😎</button>
+  <button id="no">Không 😳</button>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+
+    let yesScale = 1;
+    let noScale = 1;
+
+    yesBtn.addEventListener("click", () => {
+      yesScale += 0.3;
+      yesBtn.style.transform = `scale(${yesScale})`;
+      if (yesScale >= 3) {
+        alert("Chấp nhận sự thật rồi héng~ 🏳️‍🌈 Welcome to gay club 💅");
+      }
+    });
+
+    noBtn.addEventListener("click", () => {
+      noScale -= 0.2;
+      if (noScale <= 0.1) {
+        noBtn.style.display = "none";
+      } else {
+        noBtn.style.transform = `scale(${noScale})`;
+      }
+    });
+  </script>
+</body>
+</html>
